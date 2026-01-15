@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tumaini Hospital</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f6f8;
+    }
+    header {
+      background-color: #0a7c6d;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #055f54;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 30px;
+      margin: 20px;
+      background-color: white;
+      border-radius: 8px;
+    }
+    h2 {
+      color: #0a7c6d;
+    }
+    footer {
+      background-color: #055f54;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    .btn {
+      background-color: #0a7c6d;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background-color: #06685c;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tumaini Hospital</h1>
+    <p>Quality Healthcare, Caring Hearts</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#appointment">Appointment</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Tumaini Hospital</h2>
+    <p>
+      Tumaini Hospital is a community-based healthcare facility dedicated to providing affordable and quality medical services. We aim to improve the health and well-being of our community through compassionate care and modern medical practices.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Outpatient and Inpatient Services</li>
+      <li>Maternal and Child Health</li>
+      <li>Laboratory and Diagnostic Services</li>
+      <li>Emergency and Ambulance Services</li>
+      <li>Pharmacy Services</li>
+      <li>Specialist Clinics</li>
+    </ul>
+  </section>
+
+  <section id="appointment">
+    <h2>Book an Appointment</h2>
+    <form id="appointmentForm">
+      <label>Full Name:</label>
+      <input type="text" id="name" required />
+
+      <label>Email:</label>
+      <input type="email" id="email" required />
+
+      <label>Preferred Date:</label>
+      <input type="date" id="date" required />
+
+      <label>Message:</label>
+      <textarea id="message" rows="4"></textarea>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Location:</strong> Machakos, Kenya</p>
+    <p><strong>Phone:</strong> +254 700 000 000</p>
+    <p><strong>Email:</strong> info@tumainihospital.co.ke</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Tumaini Hospital. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("appointmentForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const date = document.getElementById("date").value;
+
+      alert("Thank you, " + name + "! Your appointment request for " + date + " has been received.");
+
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
